@@ -1,0 +1,326 @@
+@import "fonts";
+@import "responsive";
+
+
+@main-gradient-color: linear-gradient(45deg, #29116d, #5c4789);
+
+
+body {
+  font-family: ProximaNova-Regular, sans-serif;
+  font-size: 18px;
+}
+
+.page-content {
+  overflow: hidden;
+}
+
+section .title {
+  font-family: ProximaNova-Bold, sans-serif;
+  font-size: 36px;
+  margin-bottom: 35px;
+  margin-top: 0;
+  .media-phone({
+    font-size: 30px;
+  })
+}
+
+section .sub-title {
+  font-family: ProximaNova-Regular, sans-serif;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+section .desc {
+  font-family: ProximaNova-Regular, sans-serif;
+  font-size: 18px;
+}
+
+.mail-form-group {
+  .input-group {
+    margin-left: auto;
+    margin-right: auto;
+    .media-phone({
+      display: block;
+      text-align: center;
+    })
+  }
+
+  .email-input {
+    width: 290px;
+    height: 50px;
+    padding-right: 25px;
+    padding-left: 25px;
+    font-size: 14px;
+    .media-phone({
+      float: none;
+      width: 100%;
+      margin-bottom: 30px;
+      border-bottom-right-radius: 3px !important;
+      border-top-right-radius: 3px !important;
+    })
+  }
+
+  .input-group-btn {
+    width: auto;
+    .media-phone({
+      display: block;
+    })
+  }
+
+  button {
+    height: 50px;
+    padding-right: 25px;
+    padding-left: 25px;
+    font-size: 18px;
+    .media-phone({
+      border-bottom-left-radius: 3px !important;
+      border-top-left-radius: 3px !important;
+
+    })
+  }
+}
+
+
+.rotate-section {
+  .rotate-background {
+    height: 550px;
+    position: relative;
+    width: 110%;
+    left: -5%;
+    overflow: hidden;
+    background: @main-gradient-color;
+    transform: rotate(-3.5deg);
+
+  }
+
+  .content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+
+
+  }
+}
+
+
+
+.main-section {
+  background: @main-gradient-color;
+  color: #ffffff;
+  padding-top: 95px;
+  padding-bottom: 95px;
+
+  .pre-title {
+    margin-bottom: 50px;
+
+    img {
+      height: 25px;
+
+      &.mobile-logo {
+        display: none;
+        .media-phone({
+          display: inline;
+        })
+      }
+    }
+
+  }
+
+}
+
+
+.trusted-section {
+  padding: 100px 0;
+
+  .sub-title {
+    margin-bottom: 50px;
+  }
+
+  .logo-item {
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+
+  }
+
+  .logo-item-1 {
+    background: url("../img/warner-brothers.svg") no-repeat center;
+  }
+
+  .logo-item-2 {
+    background: url("../img/remax.svg") no-repeat center;
+  }
+
+  .logo-item-3 {
+    background: url("../img/walmart.svg") no-repeat center;
+  }
+
+  .logo-item-4 {
+    background: url("../img/mini.svg") no-repeat center;
+  }
+
+  .logo-item-5 {
+    background: url("../img/marriott.svg") no-repeat center;
+  }
+
+  .logo-item-6 {
+    background: url("../img/levis.svg") no-repeat center;
+  }
+
+  .logo-item-7 {
+    background: url("../img/jll.svg") no-repeat center;
+  }
+
+  .logo-item-8 {
+    background: url("../img/costa-coffee.svg") no-repeat center;
+  }
+
+  .logo-item-9 {
+    background: url("../img/bbb.svg") no-repeat center;
+  }
+
+}
+
+
+.we-work-offer-section {
+  position: relative;
+
+
+  .background-rotate-img {
+    background-image: url(../img/image-we-work.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    transform: rotate(3.5deg);
+    background-attachment: fixed;
+
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      background: @main-gradient-color;
+      opacity: 0.9;
+    }
+  }
+
+
+}
+
+
+.features-section {
+  padding: 100px 0;
+
+  .feature-item {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+
+    &.img-right-block {
+      .media-phone({
+
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+
+        direction: rtl;
+
+
+        & > [class*="col-"] {
+          -webkit-transform: rotate(-180deg);
+          -moz-transform: rotate(-180deg);
+          -ms-transform: rotate(-180deg);
+          -o-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+          direction: ltr;
+          text-align: center;
+        }
+      })
+    }
+
+
+    img {
+      .media-phone({
+        margin-bottom: 50px;
+        max-height: 205px;
+      })
+    }
+
+  }
+
+  .left-block {
+    text-align: right;
+    .media-phone({
+      text-align: center;
+    })
+  }
+
+  .right-block {
+    .media-phone({
+      text-align: center;
+    })
+  }
+}
+
+
+.we-work-offer-footer-section {
+  position: relative;
+  bottom: -50px;
+
+  .rotate-background {
+    height: 550px;
+  }
+
+  .content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+
+
+    .sub-title {
+      width: 55%;
+      margin-left: auto;
+      margin-right: auto;
+      .media-phone({
+        width: 100%;
+      })
+    }
+
+    .input-group {
+      margin-bottom: 30px;
+    }
+
+    .help-block {
+      font-family: ProximaNova-Light, sans-serif;
+      font-size: 14px;
+      color: white;
+    }
+  }
+}
+
+
+
